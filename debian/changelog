@@ -1,3 +1,9 @@
+unity-greeter (14.04.10-0ubuntu1+opinsys2) trusty; urgency=medium
+
+  * New gsetting to hide/show Puavo hosttype in the menubar.
+
+ -- Tuomas Räsänen <tuomasjjrasanen@tjjr.fi>  Thu, 18 Sep 2014 14:01:29 +0300
+
 unity-greeter (14.04.10-0ubuntu1+opinsys1) trusty; urgency=medium
 
   * Patches to exclude users from login screen and to select default user

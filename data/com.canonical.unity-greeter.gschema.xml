@@ -106,5 +106,9 @@
       <default>[]</default>
       <summary>Exclude usernames that start with any of the given strings</summary>
     </key>
+    <key name="show-puavo-hosttype" type="b">
+      <default>true</default>
+      <summary>Whether to prepend the hostname string with Puavo hosttype in the menubar</summary>
+    </key>
   </schema>
 </schemalist>

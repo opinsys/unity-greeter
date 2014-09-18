@@ -124,7 +124,23 @@ public class MenuBar : Gtk.MenuBar
 
         if (UGSettings.get_boolean (UGSettings.KEY_SHOW_HOSTNAME))
         {
-            var label = new Gtk.Label (Posix.utsname ().nodename);
+            string text = "";
+
+            if (UGSettings.get_boolean (UGSettings.KEY_SHOW_PUAVO_HOSTTYPE))
+            {
+                string puavo_hosttype;
+                try
+                {
+                    FileUtils.get_contents ("/etc/puavo/hosttype", out puavo_hosttype);
+                    text = text.concat (puavo_hosttype.strip(), " | ");
+                }
+                catch (FileError error)
+                {
+                    warning ("Failed to read /etc/puavo/hosttype: %s", error.message);
+                }
+            }
+
+            var label = new Gtk.Label (text.concat(Posix.utsname ().nodename));
             label.show ();
             var hostname_item = new Gtk.MenuItem ();
             hostname_item.add (label);
