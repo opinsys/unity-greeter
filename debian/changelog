@@ -1,6 +1,7 @@
 unity-greeter (14.04.10-0ubuntu1+opinsys2) trusty; urgency=medium
 
   * New gsetting to hide/show Puavo hosttype in the menubar.
+  * New gsetting to hide/show Puavo image release name in the menubar.
 
  -- Tuomas Räsänen <tuomasjjrasanen@tjjr.fi>  Thu, 18 Sep 2014 14:01:29 +0300
 

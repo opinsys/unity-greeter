@@ -44,6 +44,7 @@ public class UGSettings
     public static const string KEY_DEFAULT_USER = "default-user";
     public static const string KEY_EXCLUDE_PREFIXES = "exclude-prefixes";
     public static const string KEY_SHOW_PUAVO_HOSTTYPE = "show-puavo-hosttype";
+    public static const string KEY_SHOW_PUAVO_IMAGE_RELEASE = "show-puavo-image-release";
 
     public static bool get_boolean (string key)
     {

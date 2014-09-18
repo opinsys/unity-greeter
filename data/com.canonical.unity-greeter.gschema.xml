@@ -110,5 +110,9 @@
       <default>true</default>
       <summary>Whether to prepend the hostname string with Puavo hosttype in the menubar</summary>
     </key>
+    <key name="show-puavo-image-release" type="b">
+      <default>true</default>
+      <summary>Whether to prepend the hostname string with Puavo image release name in the menubar</summary>
+    </key>
   </schema>
 </schemalist>

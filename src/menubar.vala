@@ -140,6 +140,22 @@ public class MenuBar : Gtk.MenuBar
                 }
             }
 
+            if (UGSettings.get_boolean (UGSettings.KEY_SHOW_PUAVO_IMAGE_RELEASE))
+            {
+                string puavo_image_release;
+                try
+                {
+                    FileUtils.get_contents ("/etc/ltsp/this_ltspimage_release",
+                                            out puavo_image_release);
+                    text = text.concat (puavo_image_release.strip(), " | ");
+                }
+                catch (FileError error)
+                {
+                    warning ("Failed to read /etc/ltsp/this_ltspimage_release: %s",
+                             error.message);
+                }
+            }
+
             var label = new Gtk.Label (text.concat(Posix.utsname ().nodename));
             label.show ();
             var hostname_item = new Gtk.MenuItem ();
