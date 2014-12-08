@@ -1,3 +1,9 @@
+unity-greeter (14.04.10-0ubuntu1+opinsys3) trusty; urgency=low
+
+  * Disable whitespace in login screen (at login prompt).
+
+ -- Juha Erkkilä <Juha.Erkkila@opinsys.fi>  Mon, 08 Dec 2014 14:10:13 +0200
+
 unity-greeter (14.04.10-0ubuntu1+opinsys2) trusty; urgency=medium
 
   * New gsetting to hide/show Puavo hosttype in the menubar.
