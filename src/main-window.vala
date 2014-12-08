@@ -299,6 +299,11 @@ public class MainWindow : Gtk.Window
                     return true;
                 }
             }
+
+            if (event.keyval == Gdk.Key.space && user_list.prompt_mode == "login")
+            {
+               return true;
+            }
         }
 
         switch (event.keyval)

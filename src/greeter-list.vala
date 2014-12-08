@@ -769,6 +769,7 @@ public abstract class GreeterList : FadableBox
             select_entry (entry, 1.0);
     }
 
+    public string prompt_mode = "";
 
     /* Not all subclasses are going to be interested in talking to lightdm, but for those that are, make it easy. */
 
@@ -801,10 +802,15 @@ public abstract class GreeterList : FadableBox
         }
 
         prompted = true;
-        if (text == "Password: ")
+        prompt_mode = "";
+        if (text == "Password: ") {
             text = _("Password:");
-        if (text == "login:")
+            prompt_mode = "password";
+        }
+        if (text == "login:") {
             text = _("Username:");
+            prompt_mode = "login";
+        }
         add_prompt (text, type == LightDM.PromptType.SECRET);
     }
 
